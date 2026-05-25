@@ -22,7 +22,7 @@ This is the open research release. The production-grade routing platform is laun
 *   **Imitation Learning Baseline (this checkpoint):** 3.53% full-puzzle connectivity
 *   **Connectivity Solved-Rate (Per Net):** ~25% (symmetrical across all 4 nets)
 *   **Inference Speed:** ~2 seconds per 64-puzzle batch (RTX 5090)
-*   **Model Size:** ~7M parameters (105 MB checkpoint)
+*   **Model Size:** 27M physical parameters, 105 MB checkpoint (named HRM-7M following the original Samsung SAIL paper's model designation)
 
 > **Note:** The 9.18% figure reflects the production model available at [route.brownforces.io](https://route.brownforces.io). This open-source checkpoint (step_60764) is the imitation learning baseline at 3.53%.
 
