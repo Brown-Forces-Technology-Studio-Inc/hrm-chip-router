@@ -1,17 +1,15 @@
 # HRM Chip Router: 7M Parameter Hierarchical Reasoning Model
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Hugging Face Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-orange)](https://huggingface.co/bfts/hrm-chip-router-7m)
+[![Hugging Face Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-orange)](https://huggingface.co/salvadordabrown/hrm-chip-router-7m)
 
 The Brown Forces 7M HRM Chip Router is a research release of a Hierarchical Reasoning Model (HRM) trained to solve multi-net, multi-layer 3D chip routing problems. This model can route complex 3D grids in under 2 seconds on consumer hardware, demonstrating the power of recursive reasoning in electronic design automation (EDA).
 
-## 🔧 Want higher connectivity on your real designs?
+## 🔧 Want production-grade routing on your real designs?
 
-The 7M model here is the open research release. We're training a **35M enterprise model with RL-based reward** targeting >25% full-puzzle connectivity on production 3D layouts.
+This is the open research release. We're building an enterprise version for production-scale designs — ibex, riscv32i, aes, jpeg-class and beyond. Multi-layer. Fast. No $100k Cadence license.
 
 **→ [Join the waitlist at brownforces.io/chip-router](https://brownforces.io/chip-router)**
-
-Enterprise routing for riscv32i / ibex / aes / jpeg-class designs. Multi-layer. Fast. No $100k Cadence license.
 
 ---
 
@@ -57,14 +55,14 @@ Below are sample routing results from the 7M model showing input terminals and o
 
 ### Run Inference
 
-Download the checkpoint from [Hugging Face](https://huggingface.co/bfts/hrm-chip-router-7m) and place it in a `checkpoints/` directory.
+Download the checkpoint from [Hugging Face](https://huggingface.co/salvadordabrown/hrm-chip-router-7m) and place it in a `checkpoints/` directory.
 
 ```python
 import torch
 from evaluate_checkpoints import load_model_for_checkpoint, run_inference
 
 # Load the 7M model (requires CUDA)
-model, ds, meta = load_model_for_checkpoint("checkpoints/step_60764")
+model, ds, meta = load_model_for_checkpoint("checkpoints/pytorch_model.bin")
 inputs, preds = run_inference(model, ds, meta, max_batches=1)
 
 print(f"Routed {len(preds)} puzzles.")
