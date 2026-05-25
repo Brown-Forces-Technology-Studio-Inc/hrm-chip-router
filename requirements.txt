@@ -1,0 +1,13 @@
+torch
+einops
+tqdm
+coolname
+pydantic
+argdantic
+omegaconf
+hydra-core
+huggingface_hub
+numba
+matplotlib
+numpy
+pyyaml
