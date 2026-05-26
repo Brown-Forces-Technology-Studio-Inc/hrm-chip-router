@@ -15,7 +15,7 @@ This is the open research release. The production-grade routing platform is laun
 
 ## Key Performance Metrics
 
-*   **Fine-Tuned Full-Puzzle Connectivity:** **9.18%** — a **+194% explosion** over the imitation learning baseline (production model, actively improving)
+*   **Fine-Tuned Full-Puzzle Connectivity:** **13.09%** — a **+319% explosion** over the imitation learning baseline (production model, actively improving)
 *   **Token Accuracy:** 97.9% (3D spatial geometry fully transfers)
 *   **Zero-Shot Transfer (ibex topology):** 87.6% connected, 0 obstacle violations
 *   **Zero-Shot Transfer (riscv32i topology):** 65.1% connected, 0 obstacle violations
